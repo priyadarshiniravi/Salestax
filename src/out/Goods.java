@@ -12,10 +12,10 @@ public class Goods {
         this.price=price;
     }
 
-    public double computeSalesTax()
+    public double computeSalesTaxAddedToPrice()
     {
         GoodsSalesTax salesTax=new GoodsSalesTax();
-        return price*salesTax.SalesTaxForExcumption(name);
+        return price+price*salesTax.SalesTaxForExcumption(name);
 
     }
 

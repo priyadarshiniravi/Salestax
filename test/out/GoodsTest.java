@@ -11,9 +11,9 @@ public class GoodsTest {
     public void ShouldComputeSalesTaxForChocolate() {
         Goods chocolate = new Goods(false, "Chocolate Bar", 26);
 
-        double actualSalesTax = chocolate.computeSalesTax();
+        double actualSalesTax = chocolate.computeSalesTaxAddedToPrice();
 
-        Assert.assertEquals(0.0d, actualSalesTax, 0.0d);
+        Assert.assertEquals(26.0d, actualSalesTax, 0.0d);
 
     }
 
@@ -21,9 +21,9 @@ public class GoodsTest {
     public void ShouldComputeSalesTaxForOthers() {
         Goods perfume = new Goods(false, "Perfume", 10);
 
-        double actualSalesTax = perfume.computeSalesTax();
+        double actualSalesTax = perfume.computeSalesTaxAddedToPrice();
 
-        Assert.assertEquals(1.0d, actualSalesTax, 0.0d);
+        Assert.assertEquals(11.0d, actualSalesTax, 0.0d);
 
     }
 

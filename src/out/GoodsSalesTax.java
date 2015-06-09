@@ -8,6 +8,8 @@ public class GoodsSalesTax {
 
     public GoodsSalesTax() {
         ExcumptedGoods.add("Chocolate Bar");
+        ExcumptedGoods.add("book");
+
 
     }
 
