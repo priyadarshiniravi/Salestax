@@ -9,10 +9,11 @@ public class GoodsList {
         this.goodsArrayList = goodsArrayList;
     }
 
-    double ComputeTotalPrice()
-    {   double total=0.0d;
-        for(Goods goods : goodsArrayList){
-          total=total+goods.computeSalesTaxAddedToPrice()+goods.computeImportExportDuty();
+    double ComputeTotalPrice() {
+        double total = 0.0d;
+        for (Goods goods : goodsArrayList) {
+            total = total + goods.computeSalesTaxAddedToPrice() + goods.computeImportExportDuty();
+            System.out.println(goods.computeSalesTaxAddedToPrice() + goods.computeImportExportDuty());
         }
         return total;
 
