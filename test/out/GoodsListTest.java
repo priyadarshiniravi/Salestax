@@ -42,6 +42,30 @@ public class GoodsListTest {
 
     }
 
+    @Test
+    public void ShouldReturnSumOfPriceWithSalesTaxAndImportDutyForBothImportedAndExported() {
+        Goods chocolate = new Goods(true, "chocolates", 11.25);
+        Goods perfume = new Goods(false, "perfume", 18.99);
+        Goods pills = new Goods(false, "headache pills", 9.75);
+        Goods anotherPerfume = new Goods(true, "bottle of perfume", 27.99);
+
+
+        ArrayList<Goods> goodsList = new ArrayList<>();
+        goodsList.add(chocolate);
+        goodsList.add(perfume);
+        goodsList.add(anotherPerfume);
+        goodsList.add(pills);
+        GoodsList goodsListObject = new GoodsList(goodsList);
+
+        double actualTotalCost = goodsListObject.ComputeTotalPrice();
+
+        Assert.assertEquals(74.68d, actualTotalCost, 0.05d);
+
+
+    }
+
+
+
 
 
 }

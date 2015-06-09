@@ -10,7 +10,8 @@ public class GoodsSalesTax {
         ExcumptedGoods.add("Chocolate Bar");
         ExcumptedGoods.add("book");
         ExcumptedGoods.add("Box of Chocolate");
-
+        ExcumptedGoods.add("headache pills");
+        ExcumptedGoods.add("chocolates");
 
     }
 
